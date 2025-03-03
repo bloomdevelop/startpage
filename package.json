@@ -9,6 +9,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.4.1"
+    "@astrojs/react": "^4.2.1",
+    "@iconify-json/fluent": "^1.2.15",
+    "@iconify/react": "^5.2.0",
+    "@nanostores/react": "^0.8.4",
+    "@tailwindcss/vite": "^4.0.9",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "astro": "^5.4.1",
+    "astro-icon": "^1.1.5",
+    "localforage": "^1.10.0",
+    "nanostores": "^0.11.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.9"
   }
 }

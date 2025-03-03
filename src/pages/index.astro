@@ -1,11 +1,27 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Links from "../components/Links";
+import Widgets from "../components/Widgets";
+import Layout from "../layouts/Layout.astro";
+import ThemeCustomizer from "../components/ThemeCustomizer";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+interface Link {
+    href: string;
+    title: string;
+    id: string;
+}
+
+// Default links will be used only for initial setup
+const defaultLinks: Link[] = [
+    { href: "https://example.com", title: "Example 1", id: "1" },
+    { href: "https://example.com", title: "Example 2", id: "2" },
+    { href: "https://example.com", title: "Example 3", id: "3" },
+];
 ---
 
 <Layout>
-	<Welcome />
+    <div class="container mx-auto flex flex-col items-center justify-center py-4 gap-8">
+        <Links client:load defaultLinks={defaultLinks} />
+        <Widgets client:load />
+    </div>
+    <ThemeCustomizer client:load />
 </Layout>
